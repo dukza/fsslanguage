@@ -1,0 +1,59 @@
+.switch {
+  position: relative;
+}
+
+.switch .control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.switch .control-label {
+  position: relative;
+  padding-left: calc(1.75rem + 4px);
+}
+
+.switch .control-label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.25rem;
+  left: 0rem;
+  width: 1.75rem;
+  height: 1rem;
+  border-radius: 50rem;
+  pointer-events: all;
+  background-color: #448aff;
+  border: #448aff solid 1px;
+  -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+}
+
+.switch .control-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(0.25rem + 2px);
+  left: 14px;
+  width: calc(1rem - calc(2px * 2));
+  height: calc(1rem - calc(2px * 2));
+  background-color: #fff;
+  border-radius: 50rem;
+  -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+}
+
+.switch .control-input:checked ~ .control-label::before {
+  border-color: #adb5bd;
+  background-color: #fff;
+}
+
+.switch .control-input:checked ~ .control-label::after {
+  background-color: #adb5bd;
+  -webkit-transform: translateX(-0.75rem);
+          transform: translateX(-0.75rem);
+}

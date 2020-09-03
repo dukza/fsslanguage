@@ -1,0 +1,68 @@
+$color-on:#448aff;
+$color-off:#adb5bd;
+$color-white:#fff;
+$time:.2s;
+
+$switch-width:1.75rem;
+$switch-height:1rem;
+$button-top:.25rem;
+$button-size:1rem;
+$button-space:2px;
+
+// 스위치
+.switch{
+    position:relative;
+    .control-input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    .control-label{
+        position: relative;
+        padding-left:calc(#{$switch-width} + 4px);
+        //배경
+        &::before {  
+            content: "";
+            display: block;
+            position: absolute;
+            top: $button-top;
+            left:0rem;
+            width: $switch-width;
+            height: $switch-height;
+            border-radius: 50rem;
+            pointer-events: all;
+            background-color: $color-on;
+            border: $color-on solid 1px;
+            transition :background-color $time ease-in-out,border-color $time ease-in-out,box-shadow $time ease-in-out;
+        }
+        //버튼
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: calc(#{$button-top} + #{$button-space});
+            left: 14px;
+            width: calc(#{$button-size} - calc(#{$button-space} * 2));
+            height: calc(#{$button-size} - calc(#{$button-space} * 2));
+            background-color: $color-white;
+            border-radius: 50rem;
+            transition: transform $time ease-in-out,background-color $time ease-in-out,border-color $time ease-in-out,box-shadow $time ease-in-out;
+        }
+    }  
+    //배경
+    .control-input:checked~.control-label::before {
+        border-color:$color-off;
+        background-color: $color-white;
+    }  
+    //버튼
+    .control-input:checked~.control-label::after {
+        background-color: $color-off;
+        transform: translateX(-.75rem);
+    }
+      
+}
+
+
+
+
+
