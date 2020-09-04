@@ -1,0 +1,140 @@
+/*
+ * less/style.less
+ * Author: H.Alper Tuna <halpertuna@gmail.com>
+ * Date: 21.08.2016
+ */
+/*
+ * less/utils.less
+ * Author: H.Alper Tuna <halpertuna@gmail.com>
+ * Date: 21.08.2016
+ */
+.metismenu {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: 'SF Text', sans-serif;
+  font-weight: 300;
+}
+
+.metismenu > .metismenu-container > .metismenu-item {
+  line-height: 2.5em;
+  border-bottom: 1px solid #DFE3E8;
+}
+
+.metismenu > .metismenu-container > .metismenu-item > .metismenu-link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.metismenu-container .metismenu-container .metismenu-link {
+  padding-left: 2em !important;
+}
+
+.metismenu > .metismenu-container > .metismenu-item > .metismenu-link > .metismenu-item > .metismenu-link {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.metismenu > .metismenu-container > .metismenu-item > .metismenu-link .metismenu-state-icon {
+  line-height: 2.5em;
+}
+
+.metismenu::after {
+  content: " ";
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.metismenu-container,
+.metismenu-item {
+  margin: 0;
+  padding: 0;
+}
+
+.metismenu-container {
+  list-style: none;
+}
+
+.metismenu-container .metismenu-container {
+  transition: padding 300ms;
+  -webkit-transition: padding 300ms;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.metismenu-container .metismenu-container .metismenu-item > .metismenu-link {
+  height: 0;
+  overflow: hidden;
+}
+
+.metismenu-container .metismenu-container .metismenu-link {
+  padding-left: 1em;
+}
+
+.metismenu-container .metismenu-container .metismenu-container .metismenu-link {
+  padding-left: 2em;
+}
+
+.metismenu-container.visible {
+  padding: .5em 0;
+}
+
+.metismenu-container.visible > .metismenu-item > .metismenu-link {
+  height: 2.5em;
+}
+
+.metismenu-link {
+  color: #919EAB;
+  transition: height 300ms, color 300ms, background-color 300ms;
+  -webkit-transition: height 300ms, color 300ms, background-color 300ms;
+  display: block;
+  line-height: 2.5em;
+  text-decoration: none;
+}
+
+.metismenu-link:hover {
+  background: rgba(23, 23, 28, 0.05);
+  color: #637381;
+  text-decoration: none;
+}
+
+.metismenu-link.active {
+  background: #F4F6F8;
+}
+
+.metismenu-link.has-active-child, .metismenu-link.active {
+  color: #212B36;
+  font-weight: 500;
+}
+
+I.metismenu-icon {
+  text-align: center;
+}
+
+.metismenu-state-icon {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transition: transform 300ms;
+  line-height: 2.5em;
+  text-align: right;
+  width: 24px;
+  display: inline-block;
+  margin-left: auto;
+}
+
+I.metismenu-state-icon.rotate-minus-90 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}

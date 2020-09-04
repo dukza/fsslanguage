@@ -1,3 +1,4 @@
+@import 'short.scss';
 $color-on:#448aff;
 $color-off:#adb5bd;
 $color-white:#fff;
@@ -8,6 +9,79 @@ $switch-height:1rem;
 $button-top:.25rem;
 $button-size:1rem;
 $button-space:2px;
+
+
+//테이블
+.sTable{
+	width: 100%;
+	margin-bottom: 0!important;
+	border-collapse: collapse;
+	font-size: 14px;
+    color: $color-ink !important;
+    background-color: white;
+    tr{
+        :nth-child(1){
+            border-left: none;
+        }
+        :last-child{
+            border-right: none;
+        }
+    }
+    td,th {
+        padding: .3rem;
+        border-color: $color-border;
+        border-width: 1px;
+        border-style: solid;  
+        font-weight: normal;    
+    }
+    .font{
+        &-12 {
+            font-size: 12px;
+        }
+        &-weight-bolder{
+            font-weight: $font-weight-bolder;
+        }  
+        &-weight-bold{
+            font-weight:$font-weight-bold;
+        }       
+    }
+    .bg{
+        &-border {
+            background-color: $color-border !important;
+        }
+        &-white {
+            background-color: $color-white;
+        }        
+    }
+    .text{
+        &-center{
+            text-align: center;
+        }
+        &-right{
+            text-align: right;
+        }
+    }
+    .btn{
+        width: 16px !important;
+        height: 16px !important; 
+        padding: 0px;
+        display: inline-block !important;    
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .up{
+        background-image: url(./../assets/btn-xs-down.png) !important;  
+        background-size: cover;          
+    }
+    .down{
+        background-image: url(./../assets/btn-xs-down.png) !important;     
+        background-size: cover;          
+    }
+
+}
+
+
+
 
 // 스위치
 .switch{
@@ -62,7 +136,57 @@ $button-space:2px;
       
 }
 
+$dirW:12px;
+.alerts{
+    padding-right: 15px;
+    padding-left: 15px;
+    .wrap{
+        padding-right: 15px;
+        padding-left: 15px;        
+        color: $color-darkest !important;
+        background-color: $color-white !important;
+        flex-direction: row!important;
+        justify-content: flex-end!important;
+        align-items: center!important;
+        padding-bottom: .5rem!important;
+        padding-top: .5rem!important;
+        animation:moveBox 1s ease-out;
+        animation-iteration-count: 8;
+        position:relative;
+    }
+    .shadow{
+        box-shadow:$shadow;        
+    }
+    .card{
+        position: relative;
+        display: flex!important;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+    }
+    .dir{
+        width:$dirW;
+        height:$dirW;
+        border-top: 1px solid rgba(0,0,0,.125);
+        border-right: 1px solid rgba(0,0,0,.125);
+        background:#ffffff;
+        transform:rotate(45deg);
+        position:absolute;
+        top:50%;
+        right:-6px;  
+        margin-top:-6px;
+    }
 
+}
+
+@keyframes moveBox{
+    form{
+      transform:translateX(0px);
+    }
+    to{
+      transform:translateX(24px);
+    }
+}
 
 
 

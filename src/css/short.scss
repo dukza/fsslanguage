@@ -6,7 +6,8 @@ $color-darkest:#454F5B;
 $color-body:#637381;
 $color-muted:#919EAB;
 $color-lighter:#C4CDD5;
-$color-from:#DFE3E8;
+$color-form:#DFE3E8;
+$color-form-lighter:#F2F4F6;
 $color-border:#F4F6F8;
 $color-light:#F9FAFB;
 $color-white:#fff;
@@ -28,8 +29,10 @@ $color-alert-warning:#FFE7D1;
 $color-attention:#EEC200;
 $color-alert-attention:#FCF1CD;
 
-$color-highlight-indigo:#5551FF;
+$color-mark-indigo:#5551FF;
 $color-change-purple:#9C6ADE;
+$color-alert-change:#E8E5FF;
+
 
 $color-helpful-teal:#00ACC1;
 
@@ -37,6 +40,7 @@ $color-helpful-teal:#00ACC1;
 $color-brand-blue:#0D327B;
 $color-brand-yellow:#FAAC18;
 $color-brand-sky:#448AFF;
+$color-brand-green:#04CF5C;
 
 
 $font-weight-bold:700;
@@ -45,3 +49,6 @@ $font-weight-normal:500;
 $font-weight-lighter:400;
 $font-weight-light:300;
 
+
+
+$shadow: 0 .5rem 1rem rgba(0,0,0,.15);

@@ -51,6 +51,7 @@ const SideNav = () => {
                       separatorColor='#F4F6F8'
                       firstLevelBackgroundColor="transparent"
                       activeColor="#F4F6F8"
+                      lang="en"
                   />                  
                 </div>
             </div>
