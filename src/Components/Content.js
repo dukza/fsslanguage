@@ -16,7 +16,7 @@ export default ({title, children}) => (
             </div>
         </div>
     </div>   
-    <div className="col-12 bg-light pt--3 pb--3"  style={{'minHeight':'calc( 100vh - 360px)'}}>
+    <div className="col-12 bg-light pt--3 pb--6"  style={{'minHeight':'calc( 100vh - 360px)'}}>
         <div className="row">
             <div className="col-12 col-md-10 mx-auto">
                 {children}

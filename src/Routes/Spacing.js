@@ -8,7 +8,6 @@ const Spacing = () => {
         <>
             <Content title="띄어쓰기">
                 <div className="row">
-                    <Font16>제한적이고 목적이있는 스타일을 제공합니다.</Font16>
                     <div className="col-12 h--3"></div>
                     <div className="col-12">
                         <table className="table text-body w-100">
@@ -17,7 +16,7 @@ const Spacing = () => {
                                 <col width="30%"/>
                                 <col />
                             </colgroup>
-                            <thead className="bg-white">
+                            <thead className="bg-white text-dark font-weight-bolder font-14">
                                 <tr>
                                     <td className="border-0">내용</td>
                                     <td className="border-0">예시</td>

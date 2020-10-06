@@ -17,9 +17,9 @@ const UiSize = () => {
                                 <col width="30%"/>
                                 <col />
                             </colgroup>
-                            <thead className="bg-white">
+                            <thead className="bg-white text-dark font-weight-bolder font-14">
                                 <tr>
-                                    <td className="border-0" colSpan="2">기획서 사이즈</td>
+                                    <td className="border-0 " colSpan="2">기획서 사이즈</td>
                                 </tr>
                             </thead>
                             <tbody>

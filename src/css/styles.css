@@ -550,6 +550,10 @@ a.text-info:hover {
   padding-top: 4rem;
 }
 
+.pb--4 {
+  padding-bottom: 4rem;
+}
+
 .p--6 {
   padding: 6rem;
 }
