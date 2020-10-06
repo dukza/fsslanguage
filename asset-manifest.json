@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/fsslanguage/static/css/main.62811517.chunk.css",
-    "main.js": "/fsslanguage/static/js/main.f6a563a6.chunk.js",
-    "main.js.map": "/fsslanguage/static/js/main.f6a563a6.chunk.js.map",
+    "main.css": "/fsslanguage/static/css/main.6d7e9208.chunk.css",
+    "main.js": "/fsslanguage/static/js/main.8e4b88ed.chunk.js",
+    "main.js.map": "/fsslanguage/static/js/main.8e4b88ed.chunk.js.map",
     "runtime-main.js": "/fsslanguage/static/js/runtime-main.7a40d16c.js",
     "runtime-main.js.map": "/fsslanguage/static/js/runtime-main.7a40d16c.js.map",
-    "static/css/2.78f3fc1d.chunk.css": "/fsslanguage/static/css/2.78f3fc1d.chunk.css",
-    "static/js/2.105e41b7.chunk.js": "/fsslanguage/static/js/2.105e41b7.chunk.js",
-    "static/js/2.105e41b7.chunk.js.map": "/fsslanguage/static/js/2.105e41b7.chunk.js.map",
+    "static/css/2.715f41df.chunk.css": "/fsslanguage/static/css/2.715f41df.chunk.css",
+    "static/js/2.c7492f85.chunk.js": "/fsslanguage/static/js/2.c7492f85.chunk.js",
+    "static/js/2.c7492f85.chunk.js.map": "/fsslanguage/static/js/2.c7492f85.chunk.js.map",
     "index.html": "/fsslanguage/index.html",
-    "precache-manifest.cbcf41999db92471a4a99af731a115e2.js": "/fsslanguage/precache-manifest.cbcf41999db92471a4a99af731a115e2.js",
+    "precache-manifest.6ede600ae54f7ba814ecd374c841b183.js": "/fsslanguage/precache-manifest.6ede600ae54f7ba814ecd374c841b183.js",
     "service-worker.js": "/fsslanguage/service-worker.js",
-    "static/css/2.78f3fc1d.chunk.css.map": "/fsslanguage/static/css/2.78f3fc1d.chunk.css.map",
-    "static/css/main.62811517.chunk.css.map": "/fsslanguage/static/css/main.62811517.chunk.css.map",
-    "static/js/2.105e41b7.chunk.js.LICENSE.txt": "/fsslanguage/static/js/2.105e41b7.chunk.js.LICENSE.txt",
+    "static/css/2.715f41df.chunk.css.map": "/fsslanguage/static/css/2.715f41df.chunk.css.map",
+    "static/css/main.6d7e9208.chunk.css.map": "/fsslanguage/static/css/main.6d7e9208.chunk.css.map",
+    "static/js/2.c7492f85.chunk.js.LICENSE.txt": "/fsslanguage/static/js/2.c7492f85.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/fsslanguage/static/media/icomoon.cc9a85bf.eot",
     "static/media/semantic.min.css": "/fsslanguage/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.7a40d16c.js",
-    "static/css/2.78f3fc1d.chunk.css",
-    "static/js/2.105e41b7.chunk.js",
-    "static/css/main.62811517.chunk.css",
-    "static/js/main.f6a563a6.chunk.js"
+    "static/css/2.715f41df.chunk.css",
+    "static/js/2.c7492f85.chunk.js",
+    "static/css/main.6d7e9208.chunk.css",
+    "static/js/main.8e4b88ed.chunk.js"
   ]
 }
