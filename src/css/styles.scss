@@ -1,33 +1,47 @@
-@import url(bootstrap.min.css);
 @import 'short.scss';
 @import url(web.css);
+@import url(all.css);
+@import url(./../icomoon-hp/style.css);
+@import url(bootstrap.min.css);
+@import url(sanfrancisco-font.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@font-face { font-family: 'Arita-dotum-Medium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
 body{
-	font-family: 'Noto Sans KR', sans-serif;
-	font-weight: $font-weight-light;
-	color: $color-body;
-	line-height: 1.5;
+	font-family: 'Spoqa Han Sans', 'Sans-serif';
+	font-weight: $font-weight-lighter;
+	color: $color-body !important;
+	font-size: 16px !important;
+	line-height: 1.5 !important;
 }
 
+
 [lang="en"],.font-number{
-	font-family: 'SF Text', sans-serif;
+	font-family: 'Spoqa Han Sans', 'Sans-serif';
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0rem !important;
 }
 
 .font{
-	&-4{
+	&--4{
 		font-size: 4rem;
 	}
-	&-35{
+	&--35{
 		font-size: 3.5rem;
 	}
 	&-emoji{
 		font-family: Segoe UI Emoji;
 	}
-	&-20{
-		font-size: 20px;
+	&-kr{
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	&-eng{
+		font-family: 'Oswald', sans-serif;
+	}
+	&-event{
+		font-family: 'Arita-dotum-Medium';
 	}
 	&-14{
 		font-size: 14px;
@@ -45,7 +59,6 @@ body{
 		font-size: 0.69rem !important;
 	}
 }
-
 .h{
 	&1,h1{
 		font-size: 2.5rem !important;
@@ -62,9 +75,6 @@ body{
 	&5,h5{
 		font-size: 1.25rem !important;
 	}	
-	&6{
-		font-size: 1rem !important;
-	}	
 }
 
 //텍스트
@@ -74,15 +84,15 @@ body{
 	}	
 	&-white-lighter{
 		color: transparentize($color-white, .2)  !important;
-	}	
+	}
+	&-white-light{
+		color: transparentize($color-white, .4)  !important;
+	}		
 	&-ink{
 		color: $color-ink !important;
 	}
 	&-dark{
 		color: $color-dark !important;
-	}
-	&-darkest{
-		color: $color-darkest !important;
 	}
 	&-body{
 		color: $color-body !important;
@@ -90,14 +100,8 @@ body{
 	&-muted{
 		color: $color-muted !important;
 	}
-	&-lighter{
-		color: $color-lighter !important;
-	}
 	&-form{
 		color: $color-form !important;
-	}
-	&-form-lighter{
-		color: $color-form-lighter !important;
 	}
 	&-border{
 		color: $color-border !important;
@@ -105,44 +109,24 @@ body{
 	&-light{
 		color: $color-light !important;
 	}
-	&-primary{
-		color: $color-primary !important;
-	}
 	&-info{
 		color: $color-info !important;
-	}
-	&-alert-primary{
-		color: $color-alert-primary !important;
+
 	}
 	&-danger{
 		color: $color-danger !important;
 	}
-	&-alert-danger{
-		color: $color-alert-danger !important;
-	}
-	&-alert-success{
-		color: $color-alert-success !important;
-	}
-	&-warning{
-		color: $color-warning !important;
-	}
-	&-alert-warning{
-		color: $color-alert-warning !important;
-	}
 	&-attention{
 		color: $color-attention !important;
 	}
-	&-alert-attention{
-		color: $color-alert-attention !important;
+	&-mark{
+		color: $color-mark !important;
 	}
-	&-mark-indigo{
-		color: $color-mark-indigo !important;
+	&-change{
+		color: $color-change !important;
 	}
-	&-change-purple{
-		color: $color-change-purple !important;
-	}
-	&-helpful-teal{
-		color: $color-helpful-teal !important;
+	&-helpful{
+		color: $color-helpful !important;
 	}
 	&-brand-blue{
 		color: $color-brand-blue !important;
@@ -153,11 +137,23 @@ body{
 	&-brand-sky{
 		color: $color-brand-sky !important;
 	}
-	&-brand-green{
-		color: $color-brand-green !important;
+	&-indigo-700{
+		color: $color-indigo-700;
 	}
-}
+	&-indigo-600{
+		color: $color-indigo-600;
+	}
+	&-indigo-500{
+		color: $color-indigo-500;
+	}
+	&-indigo-50{
+		color: $color-indigo-50;
+	}
 
+}
+a.text-info:hover{
+	color: darken($color-info, 1) !important;
+}
 //배경
 .bg{
 	&-black{
@@ -167,28 +163,22 @@ body{
 		background-color: $color-ink !important;
 	}
 	&-dark{
-		background-color: $color-dark !important;
-	}
-	&-darkest{
-		background-color: $color-darkest !important;
+		background-color: $color-dark;
 	}
 	&-body{
-		background-color: $color-body !important;
+		background-color: $color-body;
 	}
 	&-muted{
-		background-color: $color-muted !important;
+		background-color: $color-muted;
+	}
+	&-form{
+		background-color: $color-form;
+	}
+	&-border{
+		background-color: $color-border;
 	}
 	&-lighter{
 		background-color: $color-lighter !important;
-	}
-	&-form{
-		background-color: $color-form !important;
-	}
-	&-form-lighter{
-		background-color: $color-form-lighter !important;
-	}
-	&-border{
-		background-color: $color-border !important;
 	}
 	&-light{
 		background-color: $color-light !important;
@@ -208,14 +198,14 @@ body{
 	&-alert-danger{
 		background-color: $color-alert-danger !important;
 	}
+	&-success{
+		background-color: $bg-success !important;
+	}
 	&-alert-success{
 		background-color: $color-alert-success !important;
 	}
 	&-warning{
-		background-color: $color-warning !important;
-	}
-	&-warning{
-		background-color: $color-warning !important;
+		background-color: $bg-warning !important;
 	}
 	&-alert-warning{
 		background-color: $color-alert-warning !important;
@@ -226,17 +216,17 @@ body{
 	&-alert-attention{
 		background-color: $color-alert-attention !important;
 	}
-	&-mark-indigo{
-		background-color: $color-mark-indigo !important;
+	&-mark{
+		background-color: $color-mark !important;
 	}
-	&-change-purple{
-		background-color: $color-change-purple !important;
+	&-change{
+		background-color: $color-change !important;
 	}
 	&-alert-change{
 		background-color: $color-alert-change !important;
 	}
-	&-helpful-teal{
-		background-color: $color-helpful-teal !important;
+	&-helpful{
+		background-color: $color-helpful !important;
 	}
 	&-brand-blue{
 		background-color: $color-brand-blue !important;
@@ -247,20 +237,93 @@ body{
 	&-brand-sky{
 		background-color: $color-brand-sky !important;
 	}
-	&-brand-green{
-		background-color: $color-brand-green !important;
-	}
 	&-hover-dark{
 		&:hover{
 			background-color: transparentize($color-dark, .95) !important;
 		}
 	}
+	&-hover--dark{
+		&:hover{
+			background-color: transparentize($color-dark, .95) !important;
+		}
+	}
+	&-dark-dark{
+		background-color: $dark-dark;
+	}
+	&-dark-ink{
+		background-color: $dark-ink;
+	}
+	&-indigo-700{
+		background-color: $color-indigo-700;
+	}
+	&-indigo-600{
+		background-color: $color-indigo-600;
+	}
+	&-indigo-500{
+		background-color: $color-indigo-500;
+	}
+	&-indigo-50{
+		background-color: $color-indigo-50;
+	}
+	&-blue-900{
+		background-color: $color-blue-900;
+	}
+	&-blue-800{
+		background-color: $color-blue-800;
+	}
+	&-blue-700{
+		background-color: $color-blue-700;
+	}
+	&-blue-600{
+		background-color: $color-blue-600;
+	}
+	&-blue-500{
+		background-color: $color-blue-500;
+	}
+	&-blue-400{
+		background-color: $color-blue-400;
+	}
+	&-blue-300{
+		background-color: $color-blue-300;
+	}
+	&-blue-200{
+		background-color: $color-blue-200;
+	}
+	&-blue-100{
+		background-color: $color-blue-100;
+	}
+	&-blue-50{
+		background-color: $color-blue-50;
+	}
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid $color-border;
 }
 
-
 .border{
+	border:1px solid #E0E0E0 !important;
+	&-bottom{
+		border-bottom: 1px solid #E0E0E0 !important;
+	}
 	&-bottom-light{
 		border-bottom: 1px solid transparentize($color-border, 0.9) !important;
+	}
+	&-dark-dark-top{
+		border-top:1px solid $dark-dark !important;
+	}	
+	&-body-top{
+		border-top:1px solid $color-body !important;
+	}	
+	&-form-top{
+		border-top:1px solid $color-form !important;
+	}
+	&-border-top{
+		border-top:1px solid $color-border !important;
+	}
+	&-lighter-top{
+		border-top:1px solid $color-lighter !important;
 	}
 }
 
@@ -274,9 +337,9 @@ body{
 	&-bold{
 		font-weight: $font-weight-bold; 
 	}	
-	&-bolder,th{
-		font-weight: $font-weight-bolder !important;
-	}
+	// &-bolder,th{
+	// 	font-weight: $font-weight-bolder !important;
+	// }
 	&-normal{
 		font-weight: $font-weight-normal !important;
 	}
@@ -423,6 +486,9 @@ $spacer7:$spacer*4;
 	&b--3{
 		margin-bottom: 3rem;
 	}
+	&b--4{
+		margin-bottom: 4rem;
+	}
 	&--6{
 		margin: 6rem;
 	}
@@ -443,6 +509,9 @@ $spacer7:$spacer*4;
 	&b--3{
 		padding-bottom: 3rem;
 	}
+	&t--4{
+		padding-top: 4rem;
+	}
 	&--6{
 		padding: 6rem;
 	}
@@ -451,6 +520,23 @@ $spacer7:$spacer*4;
 	}
 	&b--6{
 		padding-bottom: 6rem;
+	}
+}
+.h{
+	&--3{
+		height: 3rem;
+	}
+	&--4{
+		height: 4rem;
+	}
+	&-3{
+		height: 3rem;
+	}
+	&--3{
+		height: 3rem;
+	}
+	&-4{
+		height: 1.5rem;
 	}
 }
 
@@ -502,7 +588,7 @@ $list-padding-left:1.8rem;
 	  li::before , li:before{
 		counter-increment: section;
 		content: "("counter(section) ")";
-		font-weight: $font-weight-bolder;
+		// font-weight: $font-weight-bolder;
 		margin-left: -2.3rem;
 		width: 2rem;
 		position: absolute;
@@ -516,7 +602,7 @@ $list-padding-left:1.8rem;
 	  li::before , li:before{
 		counter-increment: section;
 		content: counter(section)".";
-		font-weight: $font-weight-bolder;
+		// font-weight: $font-weight-bolder;
 		margin-left: -2.4rem;
 		width: 2rem;
 		position: absolute;
@@ -790,6 +876,9 @@ $list-padding-left:1.8rem;
 		}
 
 	}
+	.navSider{
+		display: block !important;
+	}
 }
 @media (min-width: 768px) {
 	.App{
@@ -843,46 +932,52 @@ $list-padding-left:1.8rem;
 }
 
 
-// .accordion{
-// 	&:nth-child(1){
-// 		display: none;
-// 	}
-// }
-
-.accordion-menu * {
-	
-	
+.ui.accordion .accordion .title .fa-chevron-down.icon, .ui.accordion .title .fa-chevron-down.icon{
+	transition: all .2s ease !important;
+	color: $color-muted;
 }
-.accordion-menu a {
-    text-decoration: none;
-	color: $color-muted !important;
-	font-weight: $font-weight-lighter !important;
-}
-.accordion{
-	font-family: 'SF Text', sans-serif;
-	font-size: 14px;
-	
-	.itemWrapper a.active {
-		color: $color-darkest !important;
-	}	
+ui.accordion .accordion .active.title .fa-chevron-down.icon, .ui.accordion .active.title .fa-chevron-down.icon {
+    transform: rotate(180deg) !important;
 }
 
-.accordion .accordion .active.title,.accordion-menu a.active{
-	color: $color-ink !important;
-
+.ui.styled.accordion .accordion .content, .ui.styled.accordion .content{
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	border-bottom: 1px solid $color-lighter;
 }
 
-.accordion .contentWrapper a{
-	padding:6px 10px !important;
+.ui.styled.accordion .accordion .title, .ui.styled.accordion .title{
+	border-top: none !important;
 }
 
-.ui.styled.accordion .accordion .title, .ui.styled.accordion .title {
-    margin: 0;
-	padding: 8px 0 !important;
-	font-weight: $font-weight-normal !important;
-	color: $color-ink !important;
+.ui.styled.accordion, .ui.styled.accordion .accordion{
+	box-shadow: none !important;
+}
+.ui.styled.accordion .active.title{
+	padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}
+.ui.styled.accordion .accordion .title, .ui.styled.accordion .title{
+	padding-top: 0em !important;
+    padding-bottom: 0em !important;	
+}
+.ui.styled.accordion .title{
+	color:$color-dark !important;
+	height: 48px;
+	line-height: 48px;
+	padding: 0px !important;
+
+}
+.ui.accordion .title:not(.ui){
+	font-family: 'Spoqa Han Sans', 'Sans-serif';
+	font-size:14px !important;
+	font-weight: 700 !important;
 }
 
-.accordion.ui.styled .content, .accordion-menu .contentWrapper {
-    padding-bottom: 8px !important;
+.ui.styled.accordion .accordion .active.title, .ui.styled.accordion .accordion .title:hover, .ui.styled.accordion .active.title, .ui.styled.accordion .title:hover{
+	color:"#17171C" !important;	
+}
+.ui.styled.accordion .accordion .title, .ui.styled.accordion .title{
+	padding-top:.5em !important;	
+	padding-bottom:.5em !important;	
 }

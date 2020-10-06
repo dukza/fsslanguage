@@ -1,40 +1,43 @@
 
 $color-black:#000;
-$color-ink:#212B36;
-$color-dark:#17171C;
-$color-darkest:#454F5B;
-$color-body:#637381;
-$color-muted:#919EAB;
-$color-lighter:#C4CDD5;
-$color-form:#DFE3E8;
-$color-form-lighter:#F2F4F6;
-$color-border:#F4F6F8;
-$color-light:#F9FAFB;
+$color-ink:#222323;
+$color-dark:#444444;
+$color-body:#666666;
+$color-muted:#9F9F9F;
+$color-form:#D9D9D9;
+$color-border:#EAEAEA;
+$color-lighter:#F4F4F4;
+$color-light:#F9F9F9;
 $color-white:#fff;
 
 
-$color-primary:#0043CE;
-$color-info:#0288FF;
-$color-alert-primary:#E8F3FF;
-
-$color-danger:#DE3618;
-$color-alert-danger:#FBEAE5;
-
-$color-success:#50B83C;
-$color-alert-success:#E3F1DF;
-
-$color-warning:#DD7D02;
-$color-alert-warning:#FFE7D1;
-
-$color-attention:#EEC200;
-$color-alert-attention:#FCF1CD;
-
-$color-mark-indigo:#5551FF;
-$color-change-purple:#9C6ADE;
-$color-alert-change:#E8E5FF;
+$dark-ink:#202124;
+$dark-dark:#35363A;
 
 
-$color-helpful-teal:#00ACC1;
+
+$color-primary:#2962FF;
+$color-info:#4185F4;
+$color-alert-primary:#E6F7FF;
+
+$color-danger:#FF4D4F;
+$color-alert-danger:#FFF1F0;
+
+$bg-success:#33B679;
+$color-alert-success:#F6FFED;
+
+$bg-warning:#F49342;
+$color-alert-warning:#FFF7E6;
+
+$color-attention:#FAAD14;
+$color-alert-attention:#FFFBE6;
+
+$color-mark:#536DFE;
+$color-change:#7B60FF;
+$color-alert-change:#F9F0FF;
+
+
+$color-helpful:#00ACC1;
 
 
 $color-brand-blue:#0D327B;
@@ -43,12 +46,34 @@ $color-brand-sky:#448AFF;
 $color-brand-green:#04CF5C;
 
 
+$color-blue-900:#040A1A;
+$color-blue-800:#0A1940;
+$color-blue-700:#153180;
+$color-blue-600:#1F4ABF;
+$color-blue-500:#2962FF;
+$color-blue-400:#5481FF;
+$color-blue-300:#7FA1FF;
+$color-blue-200:#A9C0FF;
+$color-blue-100:#D4E0FF;
+$color-blue-50:#EAF0FF;
+
+$color-indigo-900:#050819;
+$color-indigo-800:#0C1440;
+$color-indigo-700:#18287F;
+$color-indigo-600:#243BBF;
+$color-indigo-500:#304FFE;
+$color-indigo-400:#304FFE;
+$color-indigo-300:#8395FE;
+$color-indigo-200:#ACB9FF;
+$color-indigo-100:#D6DCFF;
+$color-indigo-50:#EBEEFF;
+
 $font-weight-bold:700;
-$font-weight-bolder:600;
-$font-weight-normal:500;
-$font-weight-lighter:400;
-$font-weight-light:300;
+$font-weight-normal:400;
+$font-weight-lighter:300;
+$font-weight-light:100;
 
 
-
+$shadow-sm: 0 .1rem .2rem rgba(0,0,0,.15);
 $shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+$shadow-lg: 0 1rem 2.5rem rgba(0,0,0,.15);

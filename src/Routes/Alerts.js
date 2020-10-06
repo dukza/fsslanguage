@@ -1,17 +1,9 @@
-import React,{useEffect} from 'react';
-import {Link,Events} from "react-scroll";
-
+import React from 'react';
 
 import Content from 'Components/Content';
-import SectonTitle from 'Components/SectonTitle';
 import Code from 'Components/Code';
-import Sample from 'Components/Sample';
-import {useUi} from 'Components/context'
-
-
 
 const Alerts = () => {
-	const {sideNavWebs} = useUi();
     return(
         <>
             <Content title="Alerts">
@@ -25,7 +17,8 @@ const Alerts = () => {
 								</div>  
 							</div>
 						</div>
-					</div>           
+					</div>         
+					<div className="col-12 h-4"></div>
 					<Code text="html" copyTrue={true}>
 						{`<div className="alerts">
 	<div class="wrap shadow card">
@@ -34,6 +27,7 @@ const Alerts = () => {
 	</div>  
 </div>`}
 					</Code>
+					<div className="col-12 h-4"></div>
 					<Code text="css" copyTrue={true}>
 						{`.alerts {
 	padding-right: 15px;

@@ -1,34 +1,55 @@
-import React,{useEffect} from 'react';
-import {Link,Events} from "react-scroll";
-
+import React from 'react';
+import styled from 'styled-components';
 
 import Content from 'Components/Content';
-// import SectonTitle from 'Components/SectonTitle';
-// import Code from 'Components/Code';
-// import Sample from 'Components/Sample';
-// import {useUi} from 'Components/context'
+import Card from './../Components/Link/Card';
 
+import H4 from '../Components/Title/H4'
+import H16 from '../Components/Title/H16'
+
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    @media only screen and (max-width: 576px) {
+        grid-template-columns: repeat(4,1fr)
+    }
+`
+const Icon = styled.div`
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background:#fff;
+	box-sizing:border-box;
+	font-size:24px;
+    &:before{
+        content: "";
+        display: block;
+        height: 0;
+        padding-bottom: 100%;
+    }
+`
 
 
 const Icons = () => {
-    // const {sideNavWebs} = useUi();
-	// useEffect(() => {
-	// 	Events.scrollEvent.register("begin", function() {
-    //         console.log("begin", arguments);
-            
-	// 	});
-	// 	Events.scrollEvent.register("end", function() {
-	// 	    console.log("end", arguments);
-	// 	});
-	// 	return () => {
-	// 		Events.scrollEvent.remove("begin");
-	// 		Events.scrollEvent.remove("end");			
-	// 	}
-	// })
     return(
         <>
             <Content title="Icons">
-                Icons
+                <div className="row">
+                    <div className="col-12 mb-4 text-darkest">우리의 아이콘 사용은 의도적이고 합리적이어야 하며 콘텐츠의 목적을 뒷받침하는 역할을 해야 합니다.</div>
+                    <H4 title={'Arrow'}/>
+                    <div className="col-12">
+                        <div className="row">
+                            <Grid className="col-12">
+                                <Icon>
+									<a href="https://fontawesome.com/icons/chevron-down?style=light" target="_blank">
+										<Icon class="fal fa-chevron-down"></Icon>
+									</a>
+								</Icon>
+                            </Grid>
+                        </div>
+                    </div>
+                              
+                </div>
             </Content>
         </>
     );

@@ -29,7 +29,7 @@ $button-space:2px;
     }
     td,th {
         padding: .3rem;
-        border-color: $color-border;
+        border-color: $color-border-lighter;
         border-width: 1px;
         border-style: solid;  
         font-weight: normal;    
@@ -47,7 +47,7 @@ $button-space:2px;
     }
     .bg{
         &-border {
-            background-color: $color-border !important;
+            background-color: $color-border-lighter !important;
         }
         &-white {
             background-color: $color-white;

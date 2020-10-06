@@ -1,25 +1,16 @@
-import React,{useEffect} from 'react';
-import {Link,Events} from "react-scroll";
-
+import React from 'react';
 
 import Content from 'Components/Content';
-import SectonTitle from 'Components/SectonTitle';
 import Code from 'Components/Code';
 import Sample from 'Components/Sample';
-import {useUi} from 'Components/context'
-
-
 
 const Table = () => {
-	const {sideNavWebs} = useUi();
     return(
         <>
             <Content title="Table">
 				<div className="row">
 					<Sample>  
-						<div className="col-12">
-							<div className="row no-gutters border">
-								<table class="sTable bg-white ">
+						<table class="sTable bg-white ">
 									<colgroup>
 										<col width="10%"/>
 										<col width="13%"/>
@@ -33,7 +24,7 @@ const Table = () => {
 									<thead>
 										<tr className="font-12 bg-border">
 											<th scope="col" className="text-center d-flex align-items-md-center justify-content-center">
-												센터 <button className="btn down ml-2" title="센터 전체 보기"></button>
+												센터 <button className="btn down ml-1" title="센터 전체 보기"></button>
 												{/* <button className="btn up" title="센터 간략 보기"></button> */}
 											</th>
 											<th scope="col" className="text-center">출고지시</th>
@@ -77,14 +68,14 @@ const Table = () => {
 											<td className="text-right text-muted" lang="en">-</td>
 										</tr>
 									</tbody>
-								</table>
-							</div>
-						</div>                                  
+								</table>                              
 					</Sample>   
-					<Code text="image" copyTrue={false} downTrue={true}>
+					<div className="col-12 h-4"></div>
+					<Code text="image" copyTrue={false} downTrue={true} file={"/assets/table.zip"}>
 						<img style={{'width':'16px','height':'16px'}} src={require('./../assets/btn-xs-down.png')} alt="펼치기"/>
 						<img style={{'width':'16px','height':'16px'}} className="ml-2" src={require('./../assets/btn-xs-up.png')}  alt="접기"/>
 					</Code>
+					<div className="col-12 h-4"></div>
 					<Code text="html" copyTrue={true}>
 						{`<table class="sTable">
 	<colgroup>
@@ -146,6 +137,7 @@ const Table = () => {
 	</tbody>
 </table>`}
 					</Code>
+					<div className="col-12 h-4"></div>
 					<Code text="css" copyTrue={true}>
 						{`.sTable {
 	width: 100%;

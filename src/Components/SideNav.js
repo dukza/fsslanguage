@@ -1,63 +1,96 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import Menu from 'react-semantic-ui-accordion-menu';
+import React,{useState, useContext} from 'react';
+import { BrowserRouter as NavLink, Link ,withRouter} from "react-router-dom";
+import 'semantic-ui-css/semantic.min.css'
+import { Accordion,Icon } from 'semantic-ui-react'
+import styled from 'styled-components';
+import { UserContext } from "./context";
 
 
-const config  = [
-  {
-    id: "section-1",
-    title: ["Section 1"],
-    content: null,
-    sections: [
-      { 
-        id: "Guidelines",
-        title: ["Guidelines"],  // When a icon is needed in title, pass it as a fragment     
-        content: [<NavLink key="color" exact to="/color/" en="lag">Color</NavLink>
-        , <NavLink key="icons" exact to="/icons/" en="lag">Icons</NavLink>
-        , <NavLink key="typography" exact to="/typography/" en="lag">Typography</NavLink>]  // Multiple links in content could be also passed in as frament
-      },
-      { 
-        id: "Components",
-        title: ["Components"],  // When a icon is needed in title, pass it as a fragment     
-        content: [<NavLink key="table" exact to="/table/" en="lag">Table</NavLink>
-        , <NavLink key="switchs" exact to="/switchs/" en="lag">Switch</NavLink>
-        , <NavLink key="alerts" exact to="/alerts/" en="lag">Alerts</NavLink>
-        , <NavLink key="badge" exact to="/badge/" en="lag">Badge</NavLink>]  // Multiple links in content could be also passed in as frament
-      },
-      { 
-        id: "Writings",
-        title: ["Writings"],  // When a icon is needed in title, pass it as a fragment     
-        content: [<NavLink key="uitext" exact to="/uitext/" en="lag">UIText</NavLink>
-        , <NavLink key="spacing" exact to="/spacing/" en="lag">Spacing</NavLink>
-        , <NavLink key="Tone" exact to="/tone/" en="lag">Tone</NavLink>]  // Multiple links in content could be also passed in as frament
-      }
-    ]
-  },
-];
+const SLink = styled(Link)`
+  height:40px;
+  line-height:40px;
+  padding-left:40px;
+  color:${props => props.current ? "#444444" : "#666666"};
+  font-weight:400;
+  background-color:${props => props.current ? "#F4F4F4" : "transparent"};
+  transition:all 0.4s;
+  &:hover{
+    color:#444444;
+  }
+`
 
+const SsideNav = styled.div`
+  display:${props => props.isMobile ? "block": "none" };
+`
 
+export default withRouter(({location:{pathname}}) => {
+  const [activeIndex,setIndex] = useState(0);
+  const handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const newIndex = activeIndex === index ? -1 : index;
+    setIndex(newIndex);
+  }
+  const {mobile:{isMobile}} = useContext(UserContext);
+  console.log('isMobile' ,isMobile)
+  // const { mobile:{isMobile}, onMobile} = useContext(UserContext);
+  return (
 
-const SideNav = () => {
-    return(
-        <>
-            <div className="col-2 overflow-auto position-fixed" style={{'top':'88px','left':'0px','bottom':'0px','right':'0px'}}>
-                <div className="row">
-                  <Menu 
-                      tree={config}
-                      fontSize='16px'
-                      width='100%'
-                      submenuBackgroundColor="transparent"
-                      submenuFontColor='#637381'
-                      separatorColor='#F4F6F8'
-                      firstLevelBackgroundColor="transparent"
-                      activeColor="#F4F6F8"
-                      lang="en"
-                  />                  
-                </div>
+    <SsideNav className="col-md-2 overflow-auto position-fixed px-0 overflow-hidden navSider" isMobile={isMobile} style={{'top':'80px','left':'0px','bottom':'0px','right':'0px', 'zIndex':'90'}}>
+      <Accordion fluid styled>
+          <Accordion.Title
+            active={activeIndex === 0}
+            index={0}
+            onClick={handleClick}
+          >
+              <div className="col-12 d-flex align-items-center">
+                디자인 가이드
+                <Icon className="small ml-auto" name='fal fa-chevron-down' />                     
+              </div>            
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 0}>
+            <div className="row">
+              <SLink className="w-100" to="/color" current={ pathname === "/" || pathname === "/color"}>색상</SLink>
+              {/* <SLink className="w-100" to="/icons" current={pathname === "/icons"}>아이콘</SLink> */}
+              <SLink className="w-100" to="/typography" current={pathname === "/typography"}>폰트</SLink>
+              <SLink className="w-100" to="/logo" current={pathname === "/logo"}>로고</SLink>
             </div>
-        </>        
-    )
-}
-
-
-export default SideNav;
+          </Accordion.Content>
+          <Accordion.Title
+            active={activeIndex === 1}
+            index={1}
+            onClick={handleClick}
+          >
+            <div className="col-12 d-flex align-items-center">
+              콤포넌트
+              <Icon className="small ml-auto" name='fal fa-chevron-down' />                     
+            </div>
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 1}>
+            <div className="row">
+              <SLink className="w-100" to="/table" current={pathname === "/table"}>테이블</SLink>
+              <SLink className="w-100" to="/switchs" current={pathname === "/switchs"}>스위치</SLink>
+              <SLink className="w-100" to="/alerts" current={pathname === "/alerts"}>알림</SLink>
+              {/* <SLink className="w-100" to="/badge" current={pathname === "/badge"}>배지</SLink> */}
+            </div>
+          </Accordion.Content>
+          <Accordion.Title
+            active={activeIndex === 2}
+            index={2}
+            onClick={handleClick}
+          >
+            <div className="col-12 d-flex align-items-center">
+              기획 
+              <Icon className="small ml-auto" name='fal fa-chevron-down' />                     
+            </div>
+          </Accordion.Title>
+          <Accordion.Content active={activeIndex === 2}>
+            <div className="row">
+              <SLink className="w-100" to="/uiSize" current={pathname === "/uiSize"}>사이즈 표준화</SLink>
+              <SLink className="w-100" to="/writing" current={pathname === "/writing"}>표기</SLink>
+              <SLink className="w-100" to="/spacing" current={pathname === "/spacing"}>띄어쓰기</SLink>
+            </div>
+          </Accordion.Content>
+      </Accordion>
+    </SsideNav>
+  )
+})

@@ -1,16 +1,10 @@
-import React,{useEffect} from 'react';
-
+import React from 'react';
 
 import Content from 'Components/Content';
-import SectonTitle from 'Components/SectonTitle';
 import Code from 'Components/Code';
 import Sample from 'Components/Sample';
-import {useUi} from 'Components/context'
-
-
 
 const Switchs = () => {
-	const {sideNavWebs} = useUi();
     return(
         <>
             <Content title="Switchs">
@@ -21,10 +15,12 @@ const Switchs = () => {
 							<label className="text-dark control-label mb-0" htmlFor="Switch1">상품연결 미등록</label>                                
 						</div>                                    
 					</Sample>
+					<div className="col-12 h-4"></div>
 					<Code text="html" copyTrue={true}>
 						{`<input type="checkbox" className="control-input" id="Switch1">
 <label className="control-label" for="Switch1"></label>`}
 					</Code>
+					<div className="col-12 h-4"></div>
 					<Code text="css" copyTrue={true}>
 						{`.switch {
 	position: relative;
